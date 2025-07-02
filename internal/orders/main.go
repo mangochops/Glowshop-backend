@@ -43,6 +43,20 @@ var orders = []Order{
 		CreatedAt:       time.Now(),
 		UpdatedAt:       time.Now(),
 	},
+	{
+		ID:              "2",
+		OrderNumber:     "ORD-002",
+		Status:          "PENDING",
+		Subtotal:        100,
+		Tax:             10,
+		Shipping:        5,
+		Total:           115,
+		ShippingAddress: "123 Main St",
+		PaymentMethod:   "card",
+		PaymentStatus:   "PENDING",
+		CreatedAt:       time.Now(),
+		UpdatedAt:       time.Now(),
+	},
 }
 
 // RegisterRoutes registers order routes on the router
