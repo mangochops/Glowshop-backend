@@ -1,0 +1,9 @@
+modules = ["go-1.21"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["docker"]
+
+[[ports]]
+localPort = 8080
+externalPort = 80
