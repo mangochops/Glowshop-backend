@@ -1,3 +1,4 @@
+
 # syntax=docker/dockerfile:1
 # Build Stage
 FROM golang:1.20.13-bullseye as builder
@@ -12,8 +13,8 @@ RUN go mod download
 # Copy the rest of the application code
 COPY . .
 
-# Build the Go application
-RUN go build -o main .
+# Build the Go application from the correct path
+RUN go build -o main cmd/main.go
 
 # Final Stage - Create the minimal image
 FROM debian:bullseye-slim
@@ -32,4 +33,3 @@ EXPOSE 8080
 
 # Set the default command to run the Go binary
 CMD ["./main"]
-
